@@ -5,4 +5,10 @@
     <string name="enter_password">Enter Password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
+    <string name="enter_password_again">Enter Password Again</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="add_student">Add Student</string>
+    <string name="add_assignment">Add Assignment</string>
+    <string name="grade_assignment">Grade Assignment</string>
+    <string name="show_grades">Show Grades</string>
 </resources>
