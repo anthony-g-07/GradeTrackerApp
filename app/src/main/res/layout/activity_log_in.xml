@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +35,6 @@
         app:layout_constraintTop_toBottomOf="@id/sign_in_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Enter Username"
         android:gravity="center"
         android:layout_margin="16dp"
         android:id="@+id/username_EditText"
@@ -48,11 +47,11 @@
         app:layout_constraintTop_toBottomOf="@id/username_EditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Enter Password"
         android:gravity="center"
         android:layout_margin="16dp"
         android:id="@+id/password_EditText"
         android:hint="@string/enter_password"
+        android:inputType="textPassword"
         />
 
     <Button
@@ -70,7 +69,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up!"
+        android:text="@string/don_t_have_an_account_sign_up"
         app:layout_constraintBottom_toTopOf="@id/sign_up_Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

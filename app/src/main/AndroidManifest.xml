@@ -13,10 +13,10 @@
         android:theme="@style/Theme.GradingApp"
         tools:targetApi="31">
         <activity
-            android:name=".LogInActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

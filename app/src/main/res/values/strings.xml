@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Grading App</string>
     <string name="grading_app">Grading App</string>
-    <string name="enter_username" />
+    <string name="enter_username">Enter Username</string>
     <string name="enter_password">Enter Password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
@@ -11,4 +11,11 @@
     <string name="add_assignment">Add Assignment</string>
     <string name="grade_assignment">Grade Assignment</string>
     <string name="show_grades">Show Grades</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up!</string>
+    <string name="log_in">Log In</string>
+    <string name="create_account">Create Account</string>
+
+    <string name="log_out">Log Out</string>
+    <string name="admin">Admin</string>
+    <string name="delete_student">Delete Student</string>
 </resources>
