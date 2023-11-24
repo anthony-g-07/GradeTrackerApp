@@ -18,4 +18,8 @@
     <string name="log_out">Log Out</string>
     <string name="admin">Admin</string>
     <string name="delete_student">Delete Student</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="assignment_name">Assignment Name</string>
+    <string name="total_points">Total Points</string>
 </resources>

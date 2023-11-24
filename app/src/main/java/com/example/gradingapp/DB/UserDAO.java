@@ -29,4 +29,7 @@ public interface UserDAO {
 
     @Query("SELECT userName FROM " + AppDataBase.USER_TABLE)
     List<String> getAllUsernames();
+
+    @Query("SELECT * FROM " + AppDataBase.USER_TABLE + " WHERE userId = :userID")
+    UserEntity getUserByUserId(int userID);
 }
