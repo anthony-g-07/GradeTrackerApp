@@ -88,5 +88,12 @@ public class AssignmentEntity {
     public void setAssignmentId(int assignmentId) {
         this.assignmentId = assignmentId;
     }
-    //TODO create toString()
+
+    @Override
+    public String toString() {
+        return "Assignment Name: " + assignmentName +  " \n" +
+                "Student Score: " + score + " \n" +
+                "Total Points: " + totalScore + " \n" +
+                "Category: " + category + "\n\n";
+    }
 }

@@ -32,4 +32,7 @@ public interface StudentDAO {
 
     @Query("DELETE FROM " + AppDataBase.STUDENT_TABLE + " WHERE studentId = :StudentId")
     void deleteStudentsByStudentId(int StudentId);
+
+    @Query("SELECT * FROM " + AppDataBase.STUDENT_TABLE + " WHERE userId = :UserId AND firstName = :Firstname AND lastName = :Lastname")
+    StudentEntity getSingleStudentByUserIdFirstnameLastname(int UserId, String Firstname, String Lastname);
 }

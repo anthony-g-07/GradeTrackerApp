@@ -22,4 +22,9 @@
     <string name="last_name">Last Name</string>
     <string name="assignment_name">Assignment Name</string>
     <string name="total_points">Total Points</string>
+    <string name="score">Score</string>
+    <string name="admin_page">Admin Page</string>
+    <string name="delete_user">Delete User</string>
+    <string name="add_category">Add Category</string>
+    <string name="modify_category">Modify Category</string>
 </resources>

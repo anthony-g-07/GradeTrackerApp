@@ -51,5 +51,10 @@ public class StudentEntity {
         this.lastName = lastName;
     }
 
-    //TODO create toString()
+    @Override
+    public String toString() {
+        return "----------Student Name: " + firstName
+                + " " + lastName + "---------- \n\n";
+    }
+
 }

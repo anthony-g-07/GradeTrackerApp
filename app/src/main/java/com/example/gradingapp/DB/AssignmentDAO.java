@@ -33,4 +33,22 @@ public interface AssignmentDAO {
 
     @Query("SELECT * FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId AND assignmentName = :AssignmentName")
     List<AssignmentEntity> checkIfAssignmentNameIsTaken(int UserId, String AssignmentName);
+
+    @Query("SELECT DISTINCT assignmentName FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId")
+    List<String> getAssignmentNameByUserId(int UserId);
+
+    @Query("SELECT DISTINCT totalScore FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId AND assignmentName = :AssignmentName")
+    Double getAssignmentTotalScoreByUserIdAndAssignmentName(int UserId, String AssignmentName);
+
+    @Query("SELECT DISTINCT assignmentId FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId AND assignmentName = :AssignmentName")
+    Integer getAssignmentIdByUserId(int UserId, String AssignmentName);
+
+    @Query("UPDATE assignment_table SET score = :Score WHERE userId = :UserId AND studentId = :StudentId AND assignmentId = :AssignmentId")
+    void updateScoreByUserIdStudentIdAssignmentId(double Score, int UserId, int StudentId, int AssignmentId);
+
+    @Query("SELECT * FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId AND studentId = :StudentId AND assignmentId = :AssignmentId")
+    AssignmentEntity getSingleAssignmentByUserIdAndStudentIdAndAssignmentId(int UserId, int StudentId, int AssignmentId);
+
+    @Query("SELECT * FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId AND studentId = :StudentId")
+    List<AssignmentEntity> getAssignmentsByUserIdAndStudentId(int UserId, int StudentId);
 }

@@ -85,6 +85,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        gradeAssignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = GradeAssignmentActivity.intentFactory(getApplicationContext(), User.getUserId());
+                startActivity(intent);
+            }
+        });
+
+        showGrade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = ShowGradeActivity.intentFactory(getApplicationContext(), User.getUserId());
+                startActivity(intent);
+            }
+        });
+
+        adminButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = AdminPageActivity.intentFactory(getApplicationContext(), User.getUserId());
+                startActivity(intent);
+            }
+        });
+
+
+
 
 
 
