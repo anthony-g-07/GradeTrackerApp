@@ -51,4 +51,10 @@ public interface AssignmentDAO {
 
     @Query("SELECT * FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId AND studentId = :StudentId")
     List<AssignmentEntity> getAssignmentsByUserIdAndStudentId(int UserId, int StudentId);
+
+    @Query("DELETE FROM " + AppDataBase.ASSIGNMENT_TABLE + " WHERE userId = :UserId")
+    void deleteAssignmentsByUserId(int UserId);
+
+    @Query("SELECT * FROM " + AppDataBase.ASSIGNMENT_TABLE)
+    List<AssignmentEntity> getAllAssignments();
 }

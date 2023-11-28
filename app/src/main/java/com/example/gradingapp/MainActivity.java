@@ -109,12 +109,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
     }
 
     private void getDatabase() {
@@ -206,7 +200,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkIfAdmin() {
-        if (User.isAdmin()) {
+        if (User == null) {
+            return;
+        } else if (User.isAdmin()) {
             adminButton.setVisibility(View.VISIBLE);
         } else {
             adminButton.setVisibility(View.INVISIBLE);

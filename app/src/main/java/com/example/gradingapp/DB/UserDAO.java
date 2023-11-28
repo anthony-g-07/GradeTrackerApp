@@ -32,4 +32,16 @@ public interface UserDAO {
 
     @Query("SELECT * FROM " + AppDataBase.USER_TABLE + " WHERE userId = :userID")
     UserEntity getUserByUserId(int userID);
+
+    @Query("SELECT userId FROM " + AppDataBase.USER_TABLE + " WHERE userName = :Username")
+    int getUserIdByUsername(String Username);
+
+    @Query("DELETE FROM " + AppDataBase.USER_TABLE + " WHERE userName = :Username")
+    void deleteByUsername(String Username);
+
+    @Query("DELETE FROM " + AppDataBase.USER_TABLE + " WHERE userId = :UserId")
+    void deleteByUserId(int UserId);
+
+    @Query("UPDATE " + AppDataBase.USER_TABLE + " SET userName = :Username WHERE userId = :UserId")
+    void updateUsernameByUserId(String Username, int UserId);
 }

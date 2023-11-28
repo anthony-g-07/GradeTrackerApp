@@ -35,4 +35,19 @@ public interface StudentDAO {
 
     @Query("SELECT * FROM " + AppDataBase.STUDENT_TABLE + " WHERE userId = :UserId AND firstName = :Firstname AND lastName = :Lastname")
     StudentEntity getSingleStudentByUserIdFirstnameLastname(int UserId, String Firstname, String Lastname);
+
+    @Query("DELETE FROM " + AppDataBase.STUDENT_TABLE + " WHERE userId = :UserId")
+    void deleteStudentsByUserId(int UserId);
+
+    @Query("SELECT * FROM " + AppDataBase.STUDENT_TABLE)
+    List<StudentEntity> getAllStudents();
+
+    @Query("UPDATE " + AppDataBase.STUDENT_TABLE + " SET " +
+            "firstName = :Firstname,  lastName = :Lastname WHERE studentId = :StudentId")
+    void updateStudentFirstnameAndLastnameByStudentId(String Firstname, String Lastname, int StudentId);
+
+    @Query("SELECT * FROM " + AppDataBase.STUDENT_TABLE + " WHERE studentId = :StudentId")
+    StudentEntity getStudentByStudentId(int StudentId);
+
+
 }
